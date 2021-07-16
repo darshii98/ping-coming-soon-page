@@ -1,0 +1,262 @@
+/* ///////////////////////////////////////////////// */
+/* ////////////////INIT////////////////// */
+/* //////////////////////////////////////////////// */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 20px;
+  --primary-blue: hsl(223, 87%, 63%);
+  --secondary-blue-lt: hsl(223, 100%, 88%);
+  --secondary-red-lt: hsl(354, 100%, 66%);
+  --neutral-gray: hsl(0, 0%, 59%);
+  --neutral-blue-dkr: hsl(209, 33%, 12%);
+}
+
+/* ///////////////////////////////////////////////// */
+/* ////////////////BASIC SETUP////////////////// */
+/* //////////////////////////////////////////////// */
+
+.section-center {
+  min-height: 97vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 4rem;
+}
+
+.header-box {
+  text-align: center;
+}
+
+.logo {
+  margin-bottom: 2rem;
+}
+
+/* ///////////////////////////////////////////////// */
+/* ////////////////HEADER-BOX////////////////// */
+/* //////////////////////////////////////////////// */
+
+.header-box h1 {
+  font-weight: 300;
+  font-size: 2.2rem;
+  margin-bottom: 0.85rem;
+  letter-spacing: 0.07rem;
+  color: var(--neutral-gray);
+}
+
+.header-box h1 span {
+  font-weight: 700;
+  font-size: 2.2rem;
+  color: var(--neutral-blue-dkr);
+}
+
+/* ///////////////////////////////////////////////// */
+/* ////////////////FORM////////////////// */
+/* //////////////////////////////////////////////// */
+
+.form-container {
+  margin-top: 2rem;
+  width: 70%;
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+.form-container p {
+  font-size: 12px;
+  position: absolute;
+  margin-top: 6px;
+  left: 32px;
+  font-style: italic;
+  color: var(--secondary-red-lt);
+}
+
+input {
+  margin-right: 0.5rem;
+  height: 2.7rem;
+  border-radius: 30px;
+  width: 65%;
+  padding: 0 1.5rem;
+  font-size: 16px;
+  border: 1px solid var(--neutral-gray);
+}
+
+input:focus {
+  outline: none;
+}
+
+::placeholder {
+  color: var(--neutral-gray);
+}
+
+.btn-submit {
+  height: 2.7rem;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 32%;
+  font-size: 15px;
+  border: none;
+  background-color: var(--primary-blue);
+  color: white;
+  font-weight: 600;
+  transition: opacity 0.25s;
+}
+
+.btn-submit:active,
+.btn-submit:hover {
+  opacity: 0.7;
+}
+
+.dashboard {
+  width: 70%;
+}
+
+.dashboard img {
+  width: 100%;
+}
+
+/* ///////////////////////////////////////////////// */
+/* ////////////////SOCIAL ICONS////////////////// */
+/* //////////////////////////////////////////////// */
+
+.icons {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+.icons li {
+  list-style: none;
+  display: inline-block;
+  padding: 0 0.5rem;
+  border: 0.5px solid hsl(0, 0%, 89%);
+  border-radius: 50%;
+  height: 1.7rem;
+  line-height: 1.75rem;
+  transition: all 0.25s;
+  cursor: pointer;
+}
+
+.icons li:active,
+.icons li:hover {
+  background-color: var(--primary-blue);
+}
+
+.icons li a ion-icon {
+  font-size: 15px;
+  color: var(--primary-blue);
+  transition: all 0.25s;
+}
+
+.icons li:active a ion-icon,
+.icons li:hover a ion-icon {
+  color: white;
+}
+
+.footer p {
+  font-size: 13px;
+  color: var(--neutral-gray);
+}
+
+.hidden {
+  display: none;
+}
+
+/* ///////////////////////////////////////////////// */
+/* ////////////////ATTRIBUTION////////////////// */
+/* //////////////////////////////////////////////// */
+
+.attribution {
+  text-align: center;
+  background-color: var(--neutral-white);
+  color: rgb(59, 52, 52);
+  padding: 0 1rem;
+  font-size: 14px;
+  background-color: rgb(241, 235, 235);
+  padding-top: 0.4rem;
+}
+.frontend-mentor,
+.author {
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+}
+
+.author {
+  border: 1px solid transparent;
+  transition: all 0.25s;
+  font-size: 14px;
+}
+
+.author:active,
+.author:hover {
+  border-bottom: 1px solid black;
+}
+
+/* ///////////////////////////////////////////////// */
+/* ////////////////MEDIA QUERIES////////////////// */
+/* //////////////////////////////////////////////// */
+
+@media only screen and (max-width: 687px) {
+  .container {
+    min-width: 350px;
+  }
+
+  .form-container {
+    display: flex;
+    width: unset;
+  }
+
+  input,
+  .btn-submit {
+    width: 100%;
+  }
+
+  .btn-submit {
+    margin-top: 0.75rem;
+  }
+
+  .header-box h1 {
+    font-size: 1.9rem;
+  }
+
+  .header-box h1 span {
+    font-size: 1.9rem;
+  }
+
+  .header-box p {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 530px) {
+  .header-box h1 {
+    font-size: 1.4rem;
+  }
+
+  .header-box h1 span {
+    font-size: 1.4rem;
+  }
+
+  .header-box p {
+    font-size: 14px;
+  }
+
+  .dashboard {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 410px) {
+  .dashboard {
+    width: 85%;
+  }
+}
